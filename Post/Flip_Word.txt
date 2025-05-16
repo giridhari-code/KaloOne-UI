@@ -1,0 +1,51 @@
+Okay, here's the documentation for your `FlipWords` component, styled similarly to Shadcn UI documentation:
+
+**FlipWords Component Documentation**
+
+The `FlipWords` component displays a sequence of words with a fading animation and a moving color underline effect.
+
+**Usage**
+
+To use the `FlipWords` component in your PHP code, you need to call the `load('FlipWords', $props)` function, where `$props` is an associative array containing the component's configuration options.
+
+**Props**
+
+Here are all the props that you can pass to the `FlipWords` component:
+
+| Name        | Type     | Default Value | Description                                                                                                                                                                                                                                                           |
+|-------------|----------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `words`      | `array`   | `['Default']` | An array of strings representing the words that will be displayed in sequence.                                                                                                                                                                                                                                     |
+| `interval`  | `int`     | `3000`        | The time in milliseconds between each word transition.                                                                                                                                                                                                                                       |
+
+**Example Usage**
+
+1.  **Basic Usage:**
+
+    ```php
+    <?php
+        load('FlipWords', [
+            'words' => ['Code', 'Design', 'Deploy'],
+        ]);
+    ?>
+    ```
+
+2.  **Custom Interval:**
+
+    ```php
+    <?php
+        load('FlipWords', [
+            'words' => ['Fast', 'Efficient', 'Reliable'],
+            'interval' => 2000, // Transition every 2 seconds
+        ]);
+    ?>
+    ```
+
+3.  **Single Default Word:**
+
+    ```php
+    <?php
+        load('FlipWords', []); // Will display "Default"
+    ?>
+    ```
+
+This documentation provides a clear overview of how to use the `FlipWords` component and the available props for customization. You can integrate this documentation into your component library's documentation.

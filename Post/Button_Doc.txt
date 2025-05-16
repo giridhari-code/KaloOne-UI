@@ -1,0 +1,99 @@
+Okay, here's the documentation for your `Button` component in English, similar to a Shadcn UI component library:
+
+**Button Component Documentation**
+
+The `Button` component allows you to create buttons with various styles and functionalities. It can render as both a link (`<a>`) and a regular button (`<button>`).
+
+**Usage**
+
+To use the Button component in your PHP code, you need to call the `load('Button', $props)` function, where `$props` is an associative array containing the button's configuration options.
+
+**Props**
+
+Here are all the props that you can pass to the `Button` component:
+
+| Name        | Type     | Default Value | Description                                                                                                                                                                                                                                                           |
+|-------------|----------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `text`      | `string`   | `'Click Me'`    | The text displayed on the button.                                                                                                                                                                                                                                 |
+| `type`      | `string`   | `'button'`      | The type of the button (`'button'`, `'submit'`, `'reset'`). This prop is ineffective if the `href` prop is provided.                                                                                                                                              |
+| `class`     | `string`   | `''`            | Additional CSS classes to add to the button. You can use Tailwind CSS classes or your own custom classes.                                                                                                                                                           |
+| `onclick`   | `string`   | `''`            | JavaScript code to execute on the button's `onclick` event.                                                                                                                                                                                                  |
+| `icon`      | `string`   | `''`            | An icon to display inside the button. This can be an SVG string or an HTML icon tag (like Font Awesome). The icon will appear to the left of the text.                                                                                                              |
+| `variant`   | `string`   | `'primary'`     | The color and style variant of the button. Available variants are: `'primary'`, `'secondary'`, `'danger'`, `'outline'`. If an invalid variant is provided, it defaults to `'primary'`.                                                                         |
+| `disabled`  | `bool`     | `false`         | If `true`, the button will be disabled and non-interactive.                                                                                                                                                                                                 |
+| `loading`   | `bool`     | `false`         | If `true`, the button will display a loading state. By default, an animated spinner icon will be shown. You can customize the loading text using the `loadingText` prop (though this prop isn't in the current code).                                |
+| `href`      | `string`   | `''`            | If this prop is provided, the button will render as a hyperlink (`<a>` tag` ) and this will be the link URL.                                                                                                                                                            | |  `target`    | `string`   | `'\_self'`        | The target attribute of the link ( `'\_self'` ,  `'\_blank'` ,  `'\_parent'` ,  `'\_top'` ). This is only effective when the  `href`prop is provided.                                                                                                                                 | |`id`        | `string`   | `''`            | The HTML `id`attribute for the button.                                                                                                                                                                                                                                 | |`name`      | `string`   | `''`            | The HTML `name`attribute for the button. This is mainly useful for form submissions.                                                                                                                                                                                           | |`style`     | `string`   | `''\`            | Inline CSS styles to add to the button. Use with caution, as CSS classes are preferred.                                                                                                                                                                                           |
+
+**Example Usage**
+
+1.  **Default Button:**
+
+    ```php
+    <?php
+        load('Button', [
+            'text' => 'Submit',
+        ]);
+    ?>
+    ```
+
+2.  **Secondary Button:**
+
+    ```php
+    <?php
+        load('Button', [
+            'variant' => 'secondary',
+            'text' => 'Cancel',
+        ]);
+    ?>
+    ```
+
+3.  **Link Button:**
+
+    ```php
+    <?php
+        load('Button', [
+            'text' => 'Visit Google',
+            'href' => 'https://google.com',
+            'target' => '_blank',
+            'icon' => '<svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>',
+            'class' => 'text-blue-500',
+        ]);
+    ?>
+    ```
+
+4.  **Disabled Button:**
+
+    ```php
+    <?php
+        load('Button', [
+            'text' => 'Save',
+            'disabled' => true,
+        ]);
+    ?>
+    ```
+
+5.  **Loading Button:**
+
+    ```php
+    <?php
+        load('Button', [
+            'text' => 'Processing...',
+            'loading' => true,
+        ]);
+    ?>
+    ```
+
+6.  **Button with Custom Classes and Event:**
+
+    ```php
+    <?php
+        load('Button', [
+            'text' => 'Take Action',
+            'class' => 'bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-full',
+            'onclick' => 'console.log(\'Button clicked!\')',
+            'id' => 'actionButton',
+        ]);
+    ?>
+    ```
+
+This documentation should help users understand how to use and configure your `Button` component. You can include this as part of your component library's documentation.

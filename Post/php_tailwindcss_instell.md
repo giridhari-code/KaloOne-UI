@@ -93,8 +93,6 @@ Open browser: `http://localhost:8000`
 
 Agar aap chahte hain, toh main aapko ye **poora setup ZIP file** mein de sakta hoon.
 
-
-
 Hosting
 
 Aap hosting par apne PHP + Tailwind blog setup karna chahte hain. Yahan aapko step-by-step guide deta hoon:
@@ -103,24 +101,25 @@ Aap hosting par apne PHP + Tailwind blog setup karna chahte hain. Yahan aapko st
 
 1. **Local Files Prepare Karna:**
 
-   * Ensure ki aapne apne blog project ko local machine pe properly set up kar liya hai (PHP + TailwindCSS).
-   * Iska matlab yeh hai ki aapke paas yeh files honi chahiye:
+   - Ensure ki aapne apne blog project ko local machine pe properly set up kar liya hai (PHP + TailwindCSS).
+   - Iska matlab yeh hai ki aapke paas yeh files honi chahiye:
 
-     * `public/index.php`
-     * `public/css/style.css` (Tailwind ka build hua CSS file)
-     * `src/input.css` (Tailwind directives)
-     * `tailwind.config.js`
-     * `package.json` (for Tailwind setup)
+     - `public/index.php`
+     - `public/css/style.css` (Tailwind ka build hua CSS file)
+     - `src/input.css` (Tailwind directives)
+     - `tailwind.config.js`
+     - `package.json` (for Tailwind setup)
 
 2. **Build TailwindCSS locally:**
    Agar aap shared hosting pe ho, toh Node.js install karne ka option nahi hoga. Isliye aapko **TailwindCSS locally build** karna hoga:
 
-   * Run:
+   - Run:
 
      ```bash
      npx tailwindcss -i ./src/input.css -o ./public/css/style.css --minify
      ```
-   * Isse aapko **style.css** file milegi jo aap hosting pe upload karenge.
+
+   - Isse aapko **style.css** file milegi jo aap hosting pe upload karenge.
 
 ---
 
@@ -131,8 +130,8 @@ Aap hosting par apne PHP + Tailwind blog setup karna chahte hain. Yahan aapko st
 
 2. **Upload ZIP to Hosting**:
 
-   * **cPanel** (agar hosting cPanel support karti hai) ya **FTP** client (e.g., FileZilla) ka use karke apne project ko hosting pe upload karein.
-   * Files ko **`public_html`** folder ya hosting ke root folder mein upload karein.
+   - **cPanel** (agar hosting cPanel support karti hai) ya **FTP** client (e.g., FileZilla) ka use karke apne project ko hosting pe upload karein.
+   - Files ko **`public_html`** folder ya hosting ke root folder mein upload karein.
 
 ---
 
@@ -140,14 +139,14 @@ Aap hosting par apne PHP + Tailwind blog setup karna chahte hain. Yahan aapko st
 
 1. **Create MySQL Database**:
 
-   * **cPanel** mein jaake **MySQL Databases** option select karein.
-   * Ek new database banayein, jaise `blog`.
-   * Uske baad ek user create karein aur usse database ko permissions de dein.
+   - **cPanel** mein jaake **MySQL Databases** option select karein.
+   - Ek new database banayein, jaise `blog`.
+   - Uske baad ek user create karein aur usse database ko permissions de dein.
 
 2. **Create Posts Table**:
 
-   * **phpMyAdmin** mein jaake apne database `blog` ko select karein.
-   * Usmein **posts** naam ka table create karein:
+   - **phpMyAdmin** mein jaake apne database `blog` ko select karein.
+   - Usmein **posts** naam ka table create karein:
 
    ```sql
    CREATE TABLE posts (
@@ -184,12 +183,13 @@ Isse aapki URL clean ho jayegi jaise `http://example.com` instead of `http://exa
 
 1. **Verify File Upload**:
 
-   * Apne **index.php** ko browser mein access karne ke liye:
+   - Apne **index.php** ko browser mein access karne ke liye:
 
      ```text
      http://yourdomain.com/index.php
      ```
-   * Agar aapne `.htaccess` use kiya hai toh aapko `index.php` ke bina access milega:
+
+   - Agar aapne `.htaccess` use kiya hai toh aapko `index.php` ke bina access milega:
 
      ```text
      http://yourdomain.com/
@@ -197,8 +197,8 @@ Isse aapki URL clean ho jayegi jaise `http://example.com` instead of `http://exa
 
 2. **Add New Posts**:
 
-   * `add_post.php` form ke through naye posts add karein.
-   * Jab aap post add karenge, woh automatically `index.php` pe dikhai denge.
+   - `add_post.php` form ke through naye posts add karein.
+   - Jab aap post add karenge, woh automatically `index.php` pe dikhai denge.
 
 ---
 
@@ -223,10 +223,9 @@ Isse aapki URL clean ho jayegi jaise `http://example.com` instead of `http://exa
 
 ### 💡 **Important Tips:**
 
-* Agar aap shared hosting pe hain toh **Node.js** install karne ka option nahi hoga. Isliye TailwindCSS ko locally compile karke **CSS file** upload karna hoga.
-* Agar **MySQL connection** error aaye, toh `localhost` ko **hosting ka MySQL server** se replace karna hoga.
+- Agar aap shared hosting pe hain toh **Node.js** install karne ka option nahi hoga. Isliye TailwindCSS ko locally compile karke **CSS file** upload karna hoga.
+- Agar **MySQL connection** error aaye, toh `localhost` ko **hosting ka MySQL server** se replace karna hoga.
 
 ---
 
 Aap try karein aur agar koi issue aaye toh mujhse zarur poochiye, main help karunga! 😊
-

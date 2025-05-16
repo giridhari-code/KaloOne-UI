@@ -1,6 +1,7 @@
 <?php
 $components = [
     'Button' => __DIR__ . '/../components/Button.php',
+    'flip_words' => __DIR__ . '/../components/flip_words.php',
     // Add more like:
 ];
 

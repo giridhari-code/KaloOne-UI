@@ -1,12 +1,16 @@
+/** @type {import('tailwindcss').Config} */
+
+// tailwind.config.js
 module.exports = {
   content: [
     "./components/**/*.php",
     "./public/**/*.php",
-    "./pages/**/*.php",   // include this line for pages folder
-    "./*.php"             // if there are PHP files in root (optional)
+    "./pages/**/*.php",
+    "./*.php",
+    "./public/**/*.js",
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
-}
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/forms")],
+};
