@@ -1,0 +1,10 @@
+{
+  "name": "tailwind-php-project",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./public/css/style.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.0"
+  }
+}
